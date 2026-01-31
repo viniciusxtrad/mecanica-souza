@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🚗 Mecânica Souza - O Melhor Preço com Garantia de 3 Meses! 🛠️</title>
+  
+  <!-- Meta tags para preview no WhatsApp -->
+  <meta property="og:title" content="🚗 Mecânica Souza - Buscamos Seu Carro SEM Cobrar Guincho!">
+  <meta property="og:description" content="✅ Melhor preço de mão de obra da cidade ✅ Mais de 3 meses de garantia ✅ Retirada e entrega GRATUITA ✅ Orçamento sem compromisso">
+  <meta property="og:image" content="https://viniciusxtrad.github.io/mecanica-souza/souza.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:url" content="https://viniciusxtrad.github.io/mecanica-souza">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mecânica Souza">
+  <meta property="og:locale" content="pt_BR">
+  
+  <!-- Twitter Card tags para pré-visualização no Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="🚗 Mecânica Souza - Buscamos Seu Carro SEM Cobrar Guincho!">
+  <meta name="twitter:description" content="✅ Melhor preço de mão de obra da cidade ✅ Mais de 3 meses de garantia ✅ Retirada e entrega GRATUITA ✅ Orçamento sem compromisso">
+  <meta name="twitter:image" content="https://viniciusxtrad.github.io/mecanica-souza/souza.jpg">
+  <meta name="twitter:image:alt" content="Mecânica Souza - Oficina Automotiva em Terra Boa">
+  <meta name="twitter:site" content="@mecanicasouza">
+  <meta name="twitter:creator" content="@mecanicasouza">
+  
+  <!-- Meta description para SEO -->
+  <meta name="description" content="Mecânica Souza em Terra Boa - PR. Buscamos seu carro sem cobrar guincho! Melhor preço da região, garantia de 3 meses em todos os serviços. Atendimento rápido e especializado.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://viniciusxtrad.github.io/mecanica-souza">
+  
+  <style>
+    :root {
+      --primary-red: #e60000;
+      --dark-red: #8b0000;
+      --bg-black: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --accent-silver: #c0c0c0;
+      --text-gray: #d1d1d1;
+      --warning-yellow: #ffcc00;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-black);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--bg-black);
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+    }
+
+    /* Header Estilo Logotipo da Imagem */
+    .header {
+      background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 4px solid var(--primary-red);
+      position: relative;
+    }
+
+    .logo-container {
+      margin-bottom: 15px;
+    }
+
+    .logo-main {
+      font-size: 2.5em;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      text-shadow: 2px 2px 0px var(--primary-red);
+    }
+
+    .logo-sub {
+      color: var(--primary-red);
+      font-size: 1.8em;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-top: -5px;
+    }
+
+    .local-badge {
+      background: var(--primary-red);
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 4px;
+      margin-top: 15px;
+      font-size: 0.9em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* Barra de Urgência */
+    .urgency-bar {
+      background: #fff;
+      color: #000;
+      text-align: center;
+      padding: 12px;
+      font-weight: 900;
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 2px solid #333;
+    }
+
+    .container {
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    h1 span {
+      color: var(--primary-red);
+    }
+
+    .subtitle {
+      font-size: 1.1em;
+      color: var(--text-gray);
+      text-align: center;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    /* Cards de Serviço */
+    .services {
+      display: grid;
+      gap: 25px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid #333;
+      border-left: 5px solid var(--primary-red);
+      padding: 25px;
+      border-radius: 8px;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .service-card:hover {
+      background: #222;
+      transform: translateY(-5px);
+    }
+
+    .service-title {
+      font-size: 1.4em;
+      color: #fff;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .price-box {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .old-price {
+      color: #666;
+      text-decoration: line-through;
+      font-size: 0.9em;
+    }
+
+    .new-price {
+      color: var(--primary-red);
+      font-size: 1.8em;
+      font-weight: 900;
+    }
+
+    .price-note {
+      font-size: 0.8em;
+      color: #999;
+      margin-left: 10px;
+      font-style: italic;
+    }
+
+    .service-details {
+      color: var(--text-gray);
+      font-size: 0.95em;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .service-details li::before {
+      content: "✓ ";
+      color: var(--primary-red);
+      font-weight: bold;
+    }
+
+    /* Aviso Legal */
+    .legal-notice {
+      background: rgba(255, 204, 0, 0.1);
+      border: 1px solid var(--warning-yellow);
+      border-radius: 5px;
+      padding: 12px 15px;
+      margin-top: 20px;
+      font-size: 0.85em;
+      color: #ffcc00;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .legal-notice strong {
+      color: #fff;
+    }
+
+    /* Card Especial com Gatilhos */
+    .special-offer-card {
+      background: linear-gradient(135deg, var(--card-bg) 0%, #222 100%);
+      border: 2px solid var(--primary-red);
+      border-left: 8px solid var(--primary-red);
+      text-align: center;
+    }
+
+    .offer-title {
+      font-size: 1.8em;
+      color: #fff;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .offer-title span {
+      color: var(--primary-red);
+      display: block;
+      font-size: 1.2em;
+      margin-top: 5px;
+    }
+
+    .benefits-list {
+      display: grid;
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #fff;
+      text-align: left;
+      padding: 0 10px;
+    }
+
+    .benefit-icon {
+      color: var(--primary-red);
+      font-size: 1.3em;
+      min-width: 30px;
+    }
+
+    .highlight-badge {
+      background: var(--primary-red);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: 900;
+      display: inline-block;
+      margin: 10px 0;
+      font-size: 0.9em;
+    }
+
+    /* Botões */
+    .cta-container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+      padding: 20px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 900;
+      display: block;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+      transition: 0.3s;
+    }
+
+    .btn-phone {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .btn-whatsapp:hover { transform: scale(1.03); }
+
+    .footer {
+      background: #000;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.8em;
+      color: #666;
+      border-top: 1px solid #333;
+    }
+
+    .footer strong { color: #999; }
+
+    .disclaimer-global {
+      background: rgba(255, 204, 0, 0.1);
+      border: 1px solid var(--warning-yellow);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .disclaimer-global h3 {
+      color: var(--warning-yellow);
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 600px) {
+      .logo-main { font-size: 2em; }
+      .logo-sub { font-size: 1.4em; }
+      .offer-title { font-size: 1.5em; }
+      .benefit-item { font-size: 1em; }
+      .benefit-item { flex-direction: column; text-align: center; gap: 5px; }
+      .new-price { font-size: 1.6em; }
+      .legal-notice { font-size: 0.8em; padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="header">
+      <div class="logo-container">
+        <div class="logo-main">MECÂNICA</div>
+        <div class="logo-sub">SOUZA</div>
+      </div>
+      <div class="local-badge">📍 Rua Osvaldo Cruz, 56 - Terra Boa</div>
+    </div>
+
+    <div class="urgency-bar">
+      ⚡ ATENDIMENTO RÁPIDO: (44) 9702-2672 | 🚗 BUSCAMOS SEU CARRO SEM CUSTO!
+    </div>
+
+    <img src="https://viniciusxtrad.github.io/mecanica-souza/souza.jpg" alt="Oficina Mecânica Souza - Especialistas em Manutenção Automotiva" class="hero-image">
+
+    <div class="container">
+      <h1>🚗 BUSCAMOS SEU CARRO <span>SEM COBRAR GUINCHO!</span></h1>
+      <p class="subtitle">✅ <strong>O MELHOR PREÇO DE MÃO DE OBRA DA CIDADE</strong> ✅ <strong>MAIS DE 3 MESES DE GARANTIA</strong> em todos os serviços ✅ <strong>RETIRADA E ENTREGA GRÁTIS</strong> na sua casa ou trabalho</p>
+
+      <div class="disclaimer-global">
+        <h3>⚠️ AVISO IMPORTANTE</h3>
+        <p>Os preços abaixo são <strong>a partir de</strong> e podem variar conforme o modelo, ano e condições do veículo. Entre em contato para verificar a elegibilidade do seu carro para as promoções.</p>
+      </div>
+
+      <div class="services">
+        <!-- Card Especial com Gatilhos Fortes -->
+        <div class="service-card special-offer-card">
+          <div class="offer-title">
+            🎯 PORQUE ESCOLHER A MECÂNICA SOUZA?
+          </div>
+          
+          <div class="highlight-badge">⚠️ ATENÇÃO: LEIA ANTES DE LEVAR SEU CARRO EM OUTRO LUGAR!</div>
+          
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <span class="benefit-icon">🚗</span>
+              <div>
+                <strong>RETIRAMOS SEU CARRO GRÁTIS:</strong> Não pague caro por guincho! Buscamos na sua casa, trabalho ou onde estiver.
+              </div>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">💰</span>
+              <div>
+                <strong>PREÇO IMBATÍVEL GARANTIDO:</strong> Melhor custo-benefício da região. Se encontrar mais barato, conversamos!
+              </div>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">✅</span>
+              <div>
+                <strong>3 MESES DE GARANTIA:</strong> Trabalhamos com confiança. Mais de 90 dias de tranquilidade em todos os serviços.
+              </div>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">👨‍🔧</span>
+              <div>
+                <strong>MÃO DE OBRA ESPECIALIZADA:</strong> Técnicos certificados com anos de experiência. Seu carro em boas mãos!
+              </div>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">⏰</span>
+              <div>
+                <strong>AGILIDADE NO ATENDIMENTO:</strong> Diagnóstico rápido e serviço sem enrolação. Respeitamos seu tempo.
+              </div>
+            </div>
+          </div>
+          
+          <div class="price-box" style="justify-content: center; margin-top: 20px;">
+            <span class="new-price">🚨 OFERTA ESPECIAL: ECONOMIZE ATÉ 40%</span>
+          </div>
+          
+          <div class="legal-notice">
+            <strong>⚠️ IMPORTANTE:</strong> A economia de 40% é comparativa com preços de mercado e pode variar conforme o modelo do veículo e complexidade do serviço.
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-title">Troca de Óleo e Filtros</div>
+          <div class="price-box">
+            <span class="old-price">De R$ 320</span>
+            <span class="new-price">R$ 199</span>
+            <span class="price-note">(a partir de)</span>
+          </div>
+          <ul class="service-details">
+            <li>Óleo sintético de alta performance</li>
+            <li>Filtro de óleo original</li>
+            <li>Check-up de níveis de fluídos</li>
+            <li><strong>✅ 3 MESES DE GARANTIA</strong></li>
+            <li><strong>🚗 RETIRADA GRÁTIS DO SEU CARRO</strong></li>
+          </ul>
+          <div class="legal-notice">
+            <strong>⚠️ VERIFIQUE A ELEGIBILIDADE:</strong> Preço válido para veículos populares 1.0 a 2.0. Para motores maiores ou especiais, consulte-nos para orçamento personalizado.
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-title">Sistema de Freios</div>
+          <div class="price-box">
+            <span class="new-price">A partir de R$ 180</span>
+          </div>
+          <ul class="service-details">
+            <li>Troca de pastilhas (dianteiras ou traseiras)</li>
+            <li>Retífica de discos (quando possível)</li>
+            <li>Sangria de sistema</li>
+            <li>Verificação do fluído de freio</li>
+            <li><strong>✅ 3 MESES DE GARANTIA</strong></li>
+            <li><strong>🚗 RETIRADA GRÁTIS DO SEU CARRO</strong></li>
+          </ul>
+          <div class="legal-notice">
+            <strong>⚠️ CONDIÇÕES DO SERVIÇO:</strong> Preço para pastilhas dianteiras de veículos populares. Discos, tambores e componentes adicionais terão custo extra. Solicite avaliação.
+          </div>
+        </div>
+
+        <!-- NOVO SERVIÇO ADICIONADO -->
+        <div class="service-card">
+          <div class="service-title">Substituição do Kit de Sincronismo</div>
+          <div class="price-box">
+            <span class="old-price">De R$ 450</span>
+            <span class="new-price">A partir de R$ 300</span>
+          </div>
+          <ul class="service-details">
+            <li>Substituição de Correia e Tensionadores (Kit Completo)</li>
+            <li>Descontaminação Técnica dos Suportes e Polias</li>
+            <li>Alinhamento de Ponto Motor com Ferramental de Precisão</li>
+            <li>Inspeção de Retentores e Vedação do Sistema</li>
+            <li><strong>✅ 3 MESES DE GARANTIA</strong></li>
+            <li><strong>🚗 RETIRADA GRÁTIS DO SEU CARRO</strong></li>
+          </ul>
+          <div class="legal-notice">
+            <strong>⚠️ MODELOS ESPECÍFICOS:</strong> Preço válido para veículos com motor transversal 4 cilindros. Para motores V6, V8, diesel ou com configurações especiais, solicite orçamento.
+          </div>
+        </div>
+      </div>
+
+      <div class="disclaimer-global">
+        <h3>📋 TERMOS E CONDIÇÕES</h3>
+        <p>1. Os preços são <strong>promocionais e podem variar</strong> conforme o modelo, ano e condições do veículo.</p>
+        <p>2. A <strong>retirada gratuita</strong> está sujeita à disponibilidade e distância máxima de 09km da oficina.</p>
+        <p>3. A <strong>garantia de 3 meses</strong> cobre defeitos de mão de obra, não abrangendo peças com desgaste natural.</p>
+        <p>4. <strong>Consulte-nos via WhatsApp</strong> para confirmar preço final e elegibilidade do seu veículo.</p>
+      </div>
+
+      <div class="cta-container">
+        <a href="https://wa.me/554497022672?text=Olá!%20Vi%20que%20a%20Mecânica%20Souza%20busca%20o%20carro%20sem%20cobrar%20guincho!%20Quero%20saber%20mais%20sobre%20os%20serviços%20e%20a%20garantia%20de%203%20meses.%20Meu%20veículo%20é:" class="btn-whatsapp">
+          📱 CONSULTAR ELEGIBILIDADE NO WHATSAPP
+        </a>
+        <a href="tel:+554497022672" class="btn-phone">
+          📞 LIGAR PARA VERIFICAR MEU VEÍCULO
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>MECÂNICA SOUZA</strong></p>
+      <p>Rua Osvaldo Cruz, 56 - Terra Boa - PR</p>
+      <p>Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00</p>
+      <p style="margin-top: 20px;"><strong>⚠️ ATENÇÃO:</strong> Não se arrisque com mecânicos duvidosos. Garantia de 3 meses em todos os serviços e retirada gratuita do seu veículo! <strong>Preços sujeitos à confirmação após avaliação.</strong></p>
+      <p style="margin-top: 10px;">© 2026 Mecânica Souza. Todos os direitos reservados.</p>
+    </div>
+  </div>
+
+</body>
+</html>
