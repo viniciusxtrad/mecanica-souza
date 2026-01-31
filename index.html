@@ -17,14 +17,12 @@
   <meta property="og:site_name" content="Mecânica Souza">
   <meta property="og:locale" content="pt_BR">
   
-  <!-- Twitter Card tags para pré-visualização no Twitter -->
+  <!-- Twitter Card tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="🚗 Mecânica Souza - Buscamos Seu Carro SEM Cobrar Guincho!">
   <meta name="twitter:description" content="✅ Melhor preço de mão de obra da cidade ✅ Mais de 3 meses de garantia ✅ Retirada e entrega GRATUITA ✅ Orçamento sem compromisso">
   <meta name="twitter:image" content="https://viniciusxtrad.github.io/mecanica-souza/souza.jpg">
   <meta name="twitter:image:alt" content="Mecânica Souza - Oficina Automotiva em Terra Boa">
-  <meta name="twitter:site" content="@mecanicasouza">
-  <meta name="twitter:creator" content="@mecanicasouza">
   
   <!-- Meta description para SEO -->
   <meta name="description" content="Mecânica Souza em Terra Boa - PR. Buscamos seu carro sem cobrar guincho! Melhor preço da região, garantia de 3 meses em todos os serviços. Atendimento rápido e especializado.">
@@ -32,355 +30,474 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://viniciusxtrad.github.io/mecanica-souza">
   
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --primary-red: #e60000;
-      --dark-red: #8b0000;
-      --bg-black: #0f0f0f;
-      --card-bg: #1a1a1a;
-      --accent-silver: #c0c0c0;
+      --primary-red: #ff0000;
+      --dark-red: #cc0000;
+      --bg-black: #0a0a0a;
+      --card-bg: #151515;
+      --accent-silver: #e0e0e0;
       --text-gray: #d1d1d1;
-      --warning-yellow: #ffcc00;
+      --warning-yellow: #ffd700;
+      --success-green: #00ff41;
+      --gradient-red: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+      --gradient-dark: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
     }
-
+    
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       -webkit-tap-highlight-color: transparent;
     }
-
+    
     body {
       font-family: 'Montserrat', 'Segoe UI', Roboto, sans-serif;
-      background-color: var(--bg-black);
+      background: #000;
       color: #fff;
       overflow-x: hidden;
       -webkit-text-size-adjust: 100%;
-      -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-      text-size-adjust: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 0, 0, 0.05) 0%, transparent 50%);
     }
-
+    
     .wrapper {
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
       background: var(--bg-black);
-      border-left: 1px solid #333;
-      border-right: 1px solid #333;
+      box-shadow: 0 0 50px rgba(255, 0, 0, 0.1);
     }
-
-    /* Header Estilo Logotipo da Imagem */
+    
+    /* Header Premium com Animação */
     .header {
-      background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
-      padding: 30px 20px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+      padding: 35px 20px;
       text-align: center;
-      border-bottom: 4px solid var(--primary-red);
+      border-bottom: 3px solid var(--primary-red);
       position: relative;
+      overflow: hidden;
     }
-
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.1), transparent);
+      animation: shine 3s infinite;
+    }
+    
+    @keyframes shine {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    
     .logo-container {
-      margin-bottom: 12px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
     }
-
+    
     .logo-main {
-      font-size: 2em;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2.5em;
       font-weight: 900;
       color: #fff;
       text-transform: uppercase;
-      letter-spacing: -1px;
-      text-shadow: 2px 2px 0px var(--primary-red);
+      letter-spacing: 3px;
+      text-shadow: 
+        0 0 10px rgba(255, 0, 0, 0.5),
+        0 0 20px rgba(255, 0, 0, 0.3),
+        3px 3px 0px var(--primary-red);
+      animation: glow 2s ease-in-out infinite alternate;
     }
-
+    
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.3), 3px 3px 0px var(--primary-red); }
+      to { text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.5), 3px 3px 0px var(--dark-red); }
+    }
+    
     .logo-sub {
+      font-family: 'Rajdhani', sans-serif;
       color: var(--primary-red);
-      font-size: 1.5em;
+      font-size: 1.8em;
       font-weight: 800;
       text-transform: uppercase;
-      margin-top: -5px;
+      margin-top: -8px;
+      letter-spacing: 8px;
     }
-
+    
     .local-badge {
-      background: var(--primary-red);
+      background: var(--gradient-red);
       display: inline-block;
-      padding: 6px 15px;
-      border-radius: 4px;
-      margin-top: 12px;
-      font-size: 0.85em;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin-top: 15px;
+      font-size: 0.9em;
       font-weight: 700;
       text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+      position: relative;
+      z-index: 1;
     }
-
-    /* Barra de Urgência */
+    
+    /* Barra de Urgência Animada */
     .urgency-bar {
-      background: #fff;
+      background: linear-gradient(90deg, #fff 0%, #f0f0f0 50%, #fff 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s linear infinite;
       color: #000;
       text-align: center;
-      padding: 10px 5px;
+      padding: 12px 10px;
       font-weight: 900;
       font-size: 0.85em;
       text-transform: uppercase;
-      line-height: 1.3;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      line-height: 1.4;
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
     }
-
+    
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    
     .hero-image {
       width: 100%;
       height: auto;
       display: block;
-      border-bottom: 2px solid #333;
-      max-height: 250px;
+      max-height: 280px;
       object-fit: cover;
+      border-bottom: 3px solid var(--primary-red);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     }
-
+    
     .container {
-      padding: 30px 15px;
-      background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+      padding: 35px 20px;
+      background: var(--gradient-dark);
     }
-
+    
+    /* Títulos com efeito neon */
     h1 {
-      font-size: 1.8em;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2em;
       color: #fff;
       text-align: center;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       text-transform: uppercase;
       font-weight: 900;
-      line-height: 1.2;
+      line-height: 1.3;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     }
-
+    
     h1 span {
       color: var(--primary-red);
+      display: block;
+      margin-top: 8px;
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
     }
-
+    
     .subtitle {
-      font-size: 1em;
+      font-size: 1.05em;
       color: var(--text-gray);
       text-align: center;
-      margin-bottom: 30px;
-      line-height: 1.5;
-      padding: 0 5px;
+      margin-bottom: 35px;
+      line-height: 1.6;
+      padding: 0 10px;
     }
-
-    /* Cards de Serviço */
+    
+    /* Cards de Serviço com Glassmorphism */
     .services {
       display: grid;
-      gap: 20px;
+      gap: 25px;
     }
-
+    
     .service-card {
-      background: var(--card-bg);
-      border: 1px solid #333;
-      border-left: 5px solid var(--primary-red);
-      padding: 20px;
-      border-radius: 8px;
-      transition: 0.3s;
+      background: rgba(25, 25, 25, 0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-left: 6px solid var(--primary-red);
+      padding: 25px;
+      border-radius: 15px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
-
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255, 0, 0, 0.05) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    
     .service-card:hover {
-      background: #222;
-      transform: translateY(-3px);
+      transform: translateY(-8px) scale(1.02);
+      border-color: var(--primary-red);
+      box-shadow: 
+        0 15px 45px rgba(255, 0, 0, 0.2),
+        0 0 30px rgba(255, 0, 0, 0.1);
     }
-
+    
+    .service-card:hover::before {
+      opacity: 1;
+    }
+    
     .service-title {
-      font-size: 1.2em;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.4em;
       color: #fff;
       font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
     }
-
+    
     .price-box {
       display: flex;
       align-items: baseline;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
+      gap: 10px;
+      margin-bottom: 15px;
     }
-
+    
     .old-price {
       color: #666;
       text-decoration: line-through;
-      font-size: 0.85em;
+      font-size: 0.9em;
+      position: relative;
     }
-
+    
     .new-price {
       color: var(--primary-red);
-      font-size: 1.5em;
+      font-size: 1.8em;
       font-weight: 900;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      font-family: 'Rajdhani', sans-serif;
     }
-
+    
     .price-note {
       font-size: 0.75em;
       color: #999;
       font-style: italic;
     }
-
+    
     .service-details {
       color: var(--text-gray);
-      font-size: 0.9em;
+      font-size: 0.95em;
       list-style: none;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
-
+    
     .service-details li {
-      margin-bottom: 5px;
-      line-height: 1.4;
+      margin-bottom: 8px;
+      line-height: 1.5;
+      padding-left: 25px;
+      position: relative;
     }
-
+    
     .service-details li::before {
-      content: "✓ ";
-      color: var(--primary-red);
+      content: "✓";
+      color: var(--success-green);
       font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 1.2em;
     }
-
-    /* Aviso Legal */
+    
+    /* Aviso Legal Modernizado */
     .legal-notice {
-      background: rgba(255, 204, 0, 0.1);
-      border: 1px solid var(--warning-yellow);
-      border-radius: 5px;
-      padding: 10px 12px;
-      margin-top: 15px;
+      background: rgba(255, 215, 0, 0.08);
+      border: 2px solid rgba(255, 215, 0, 0.3);
+      border-radius: 10px;
+      padding: 12px 15px;
+      margin-top: 18px;
       font-size: 0.8em;
-      color: #ffcc00;
+      color: #ffd700;
       text-align: center;
-      line-height: 1.3;
+      line-height: 1.4;
+      backdrop-filter: blur(5px);
     }
-
+    
     .legal-notice strong {
       color: #fff;
     }
-
-    /* Card Especial com Gatilhos */
+    
+    /* Card Especial Premium */
     .special-offer-card {
-      background: linear-gradient(135deg, var(--card-bg) 0%, #222 100%);
+      background: linear-gradient(135deg, rgba(25, 25, 25, 0.95) 0%, rgba(40, 0, 0, 0.8) 100%);
       border: 2px solid var(--primary-red);
       border-left: 8px solid var(--primary-red);
       text-align: center;
+      box-shadow: 
+        0 10px 40px rgba(255, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
-
+    
     .offer-title {
-      font-size: 1.5em;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.6em;
       color: #fff;
       font-weight: 900;
       text-transform: uppercase;
-      margin-bottom: 15px;
-      line-height: 1.2;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      letter-spacing: 1px;
     }
-
-    .offer-title span {
-      color: var(--primary-red);
-      display: block;
-      font-size: 1em;
-      margin-top: 5px;
-    }
-
+    
     .benefits-list {
       display: grid;
-      gap: 12px;
-      margin: 20px 0;
+      gap: 15px;
+      margin: 25px 0;
     }
-
+    
     .benefit-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
+      gap: 12px;
       font-size: 0.95em;
-      font-weight: 700;
+      font-weight: 600;
       color: #fff;
       text-align: left;
-      padding: 0 5px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      border-left: 3px solid var(--primary-red);
+      transition: all 0.3s;
     }
-
+    
+    .benefit-item:hover {
+      background: rgba(255, 0, 0, 0.1);
+      transform: translateX(5px);
+    }
+    
     .benefit-icon {
       color: var(--primary-red);
-      font-size: 1.1em;
-      min-width: 25px;
+      font-size: 1.3em;
+      min-width: 30px;
       flex-shrink: 0;
     }
-
+    
     .highlight-badge {
-      background: var(--primary-red);
+      background: var(--gradient-red);
       color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
+      padding: 8px 20px;
+      border-radius: 25px;
       font-weight: 900;
       display: inline-block;
-      margin: 8px 0;
+      margin: 10px 0 20px;
       font-size: 0.85em;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+      animation: pulse 2s ease-in-out infinite;
     }
-
-    /* Botões RESPONSIVOS */
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    /* Botões Premium com Gradiente */
     .cta-container {
-      margin-top: 40px;
+      margin-top: 45px;
       text-align: center;
     }
-
+    
     .btn-whatsapp {
-      background: #25d366;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
       color: #fff;
-      padding: 16px 20px;
-      border-radius: 12px;
+      padding: 18px 25px;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: 900;
       display: block;
       width: 100%;
-      max-width: 320px;
-      margin: 0 auto 12px;
-      box-shadow: 0 6px 15px rgba(37, 211, 102, 0.2);
-      transition: 0.3s;
+      max-width: 340px;
+      margin: 0 auto 15px;
+      box-shadow: 
+        0 8px 25px rgba(37, 211, 102, 0.3),
+        0 0 20px rgba(37, 211, 102, 0.2);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       font-size: 1em;
       text-align: center;
       border: none;
       cursor: pointer;
-      touch-action: manipulation;
-      -webkit-user-select: none;
-      user-select: none;
-      min-height: 54px;
+      min-height: 56px;
       display: flex;
       align-items: center;
       justify-content: center;
-      line-height: 1.2;
+      line-height: 1.3;
+      position: relative;
+      overflow: hidden;
     }
-
+    
+    .btn-whatsapp::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+    
+    .btn-whatsapp:hover::before {
+      left: 100%;
+    }
+    
     .btn-phone {
       background: transparent;
       color: #fff;
-      border: 2px solid #fff;
-      padding: 14px 20px;
-      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 16px 25px;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: 700;
       display: block;
       width: 100%;
-      max-width: 320px;
+      max-width: 340px;
       margin: 0 auto;
-      transition: 0.3s;
+      transition: all 0.3s;
       font-size: 0.95em;
       text-align: center;
       cursor: pointer;
-      touch-action: manipulation;
-      min-height: 50px;
+      min-height: 52px;
       display: flex;
       align-items: center;
       justify-content: center;
-      line-height: 1.2;
+      line-height: 1.3;
+      backdrop-filter: blur(5px);
     }
-
+    
     .btn-whatsapp:hover, 
     .btn-whatsapp:active { 
-      transform: scale(1.02); 
-      background: #1da851;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 
+        0 12px 35px rgba(37, 211, 102, 0.4),
+        0 0 30px rgba(37, 211, 102, 0.3);
     }
-
+    
     .btn-phone:hover,
     .btn-phone:active {
       background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.6);
+      transform: translateY(-2px);
     }
-
-    /* Estilo para toque em dispositivos móveis */
+    
     @media (hover: none) {
       .btn-whatsapp:active {
         transform: scale(0.98);
@@ -389,159 +506,110 @@
         transform: scale(0.98);
       }
     }
-
+    
     .footer {
       background: #000;
-      padding: 30px 15px;
+      padding: 35px 20px;
       text-align: center;
-      font-size: 0.75em;
+      font-size: 0.8em;
       color: #666;
-      border-top: 1px solid #333;
+      border-top: 2px solid rgba(255, 0, 0, 0.2);
     }
-
-    .footer strong { color: #999; }
-
+    
+    .footer strong { 
+      color: var(--primary-red);
+      font-size: 1.1em;
+    }
+    
+    .footer p {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+    
     .disclaimer-global {
-      background: rgba(255, 204, 0, 0.1);
-      border: 1px solid var(--warning-yellow);
-      border-radius: 8px;
-      padding: 15px;
-      margin: 25px 0;
+      background: rgba(255, 215, 0, 0.08);
+      border: 2px solid rgba(255, 215, 0, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 30px 0;
       text-align: center;
+      backdrop-filter: blur(10px);
     }
-
+    
     .disclaimer-global h3 {
       color: var(--warning-yellow);
-      margin-bottom: 8px;
-      font-size: 1em;
+      margin-bottom: 12px;
+      font-size: 1.1em;
+      font-weight: 800;
     }
-
+    
     .disclaimer-global p {
       font-size: 0.85em;
-      margin-bottom: 8px;
-      line-height: 1.4;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      color: #ddd;
     }
-
-    /* Media Queries para diferentes tamanhos de tela */
     
-    /* Telas muito pequenas (até 360px) */
+    /* Responsividade Otimizada */
     @media (max-width: 360px) {
-      .header {
-        padding: 20px 15px;
-      }
-      
-      .logo-main {
-        font-size: 1.7em;
-      }
-      
-      .logo-sub {
-        font-size: 1.3em;
-      }
-      
-      h1 {
-        font-size: 1.6em;
-      }
-      
-      .btn-whatsapp,
-      .btn-phone {
-        max-width: 280px;
-        padding: 14px 16px;
-        font-size: 0.95em;
-        min-height: 48px;
-      }
-      
-      .service-card {
-        padding: 15px;
-      }
-    }
-
-    /* Moto G6 Play específico (720x1440) e similares */
-    @media (min-width: 360px) and (max-width: 400px) {
-      .btn-whatsapp,
-      .btn-phone {
-        max-width: 300px;
+      .header { padding: 25px 15px; }
+      .logo-main { font-size: 2em; letter-spacing: 2px; }
+      .logo-sub { font-size: 1.5em; letter-spacing: 6px; }
+      h1 { font-size: 1.7em; }
+      .btn-whatsapp, .btn-phone { 
+        max-width: 290px; 
         padding: 15px 18px;
+        font-size: 0.95em;
+        min-height: 50px;
       }
-      
-      .hero-image {
-        max-height: 200px;
-      }
+      .service-card { padding: 18px; }
     }
-
-    /* Telas médias (401px - 600px) */
+    
+    @media (min-width: 360px) and (max-width: 400px) {
+      .btn-whatsapp, .btn-phone { 
+        max-width: 310px; 
+        padding: 16px 20px; 
+      }
+      .hero-image { max-height: 220px; }
+    }
+    
     @media (min-width: 401px) and (max-width: 600px) {
-      .container {
-        padding: 35px 20px;
+      .container { padding: 40px 22px; }
+      .btn-whatsapp, .btn-phone { 
+        max-width: 350px; 
+        padding: 17px 24px; 
       }
-      
-      .btn-whatsapp,
-      .btn-phone {
-        max-width: 340px;
-        padding: 17px 22px;
-      }
-      
-      .hero-image {
-        max-height: 220px;
-      }
+      .hero-image { max-height: 240px; }
     }
-
-    /* Telas maiores (acima de 600px) */
+    
     @media (min-width: 601px) {
-      .container {
-        padding: 40px 25px;
-      }
-      
-      .btn-whatsapp,
-      .btn-phone {
-        max-width: 360px;
-        padding: 18px 25px;
+      .container { padding: 45px 28px; }
+      .btn-whatsapp, .btn-phone { 
+        max-width: 380px; 
+        padding: 19px 28px;
         font-size: 1.05em;
-        min-height: 56px;
+        min-height: 58px;
       }
-      
-      .hero-image {
-        max-height: 250px;
-      }
-      
-      h1 {
-        font-size: 2em;
-      }
-      
-      .subtitle {
-        font-size: 1.1em;
-      }
+      .hero-image { max-height: 300px; }
+      h1 { font-size: 2.2em; }
+      .subtitle { font-size: 1.1em; }
     }
-
-    /* Evitar zoom em inputs no iOS */
+    
     @supports (-webkit-touch-callout: none) {
-      .btn-whatsapp,
-      .btn-phone {
-        font-size: 16px; /* Tamanho fixo para evitar zoom no iOS */
+      .btn-whatsapp, .btn-phone {
+        font-size: 16px;
       }
     }
-
-    /* Melhorar legibilidade em telas pequenas */
+    
     @media (max-width: 480px) {
-      body {
-        font-size: 14px;
-      }
-      
-      .service-title {
-        font-size: 1.1em;
-      }
-      
-      .new-price {
-        font-size: 1.4em;
-      }
-      
-      .benefit-item {
-        font-size: 0.9em;
-      }
+      body { font-size: 14px; }
+      .service-title { font-size: 1.2em; }
+      .new-price { font-size: 1.6em; }
+      .benefit-item { font-size: 0.9em; }
     }
   </style>
 </head>
 <body>
-
   <div class="wrapper">
     <div class="header">
       <div class="logo-container">
@@ -550,24 +618,25 @@
       </div>
       <div class="local-badge">📍 Rua Osvaldo Cruz, 56 - Terra Boa</div>
     </div>
-
+    
     <div class="urgency-bar">
       ⚡ ATENDIMENTO RÁPIDO: (44) 9702-2672 | 🚗 BUSCAMOS SEU CARRO SEM CUSTO!
     </div>
-
+    
     <img src="https://viniciusxtrad.github.io/mecanica-souza/souza.jpg" alt="Oficina Mecânica Souza - Especialistas em Manutenção Automotiva" class="hero-image">
-
+    
     <div class="container">
       <h1>🚗 BUSCAMOS SEU CARRO <span>SEM COBRAR GUINCHO!</span></h1>
+      
       <p class="subtitle">✅ <strong>O MELHOR PREÇO DE MÃO DE OBRA DA CIDADE</strong> ✅ <strong>MAIS DE 3 MESES DE GARANTIA</strong> em todos os serviços ✅ <strong>RETIRADA E ENTREGA GRÁTIS</strong> na sua casa ou trabalho</p>
-
+      
       <div class="disclaimer-global">
         <h3>⚠️ AVISO IMPORTANTE</h3>
         <p>Os preços abaixo são <strong>a partir de</strong> e podem variar conforme o modelo, ano e condições do veículo. Entre em contato para verificar a elegibilidade do seu carro para as promoções.</p>
       </div>
-
+      
       <div class="services">
-        <!-- Card Especial com Gatilhos Fortes -->
+        <!-- Card Especial -->
         <div class="service-card special-offer-card">
           <div class="offer-title">
             🎯 PORQUE ESCOLHER A MECÂNICA SOUZA?
@@ -616,7 +685,8 @@
             <strong>⚠️ IMPORTANTE:</strong> A economia de 40% é comparativa com preços de mercado e pode variar conforme o modelo do veículo e complexidade do serviço.
           </div>
         </div>
-
+        
+        <!-- Serviço 1 -->
         <div class="service-card">
           <div class="service-title">Troca de Óleo e Filtros</div>
           <div class="price-box">
@@ -635,7 +705,8 @@
             <strong>⚠️ VERIFIQUE A ELEGIBILIDADE:</strong> Preço válido para veículos populares 1.0 a 2.0. Para motores maiores ou especiais, consulte-nos para orçamento personalizado.
           </div>
         </div>
-
+        
+        <!-- Serviço 2 -->
         <div class="service-card">
           <div class="service-title">Sistema de Freios</div>
           <div class="price-box">
@@ -653,8 +724,8 @@
             <strong>⚠️ CONDIÇÕES DO SERVIÇO:</strong> Preço para pastilhas dianteiras de veículos populares. Discos, tambores e componentes adicionais terão custo extra. Solicite avaliação.
           </div>
         </div>
-
-        <!-- NOVO SERVIÇO ADICIONADO -->
+        
+        <!-- Serviço 3 -->
         <div class="service-card">
           <div class="service-title">Substituição do Kit de Sincronismo</div>
           <div class="price-box">
@@ -674,7 +745,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="disclaimer-global">
         <h3>📋 TERMOS E CONDIÇÕES</h3>
         <p>1. Os preços são <strong>promocionais e podem variar</strong> conforme o modelo, ano e condições do veículo.</p>
@@ -682,7 +753,7 @@
         <p>3. A <strong>garantia de 3 meses</strong> cobre defeitos de mão de obra, não abrangendo peças com desgaste natural.</p>
         <p>4. <strong>Consulte-nos via WhatsApp</strong> para confirmar preço final e elegibilidade do seu veículo.</p>
       </div>
-
+      
       <div class="cta-container">
         <a href="https://wa.me/554497022672?text=Olá!%20Vi%20que%20a%20Mecânica%20Souza%20busca%20o%20carro%20sem%20cobrar%20guincho!%20Quero%20saber%20mais%20sobre%20os%20serviços%20e%20a%20garantia%20de%203%20meses.%20Meu%20veículo%20é:" class="btn-whatsapp">
           📱 CONSULTAR ELEGIBILIDADE NO WHATSAPP
@@ -692,7 +763,7 @@
         </a>
       </div>
     </div>
-
+    
     <div class="footer">
       <p><strong>MECÂNICA SOUZA</strong></p>
       <p>Rua Osvaldo Cruz, 56 - Terra Boa - PR</p>
@@ -701,6 +772,5 @@
       <p style="margin-top: 8px;">© 2026 Mecânica Souza. Todos os direitos reservados.</p>
     </div>
   </div>
-
 </body>
 </html>
