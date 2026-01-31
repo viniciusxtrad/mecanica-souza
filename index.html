@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
   <title>🚗 Mecânica Souza - O Melhor Preço com Garantia de 3 Meses! 🛠️</title>
   
   <!-- Meta tags para preview no WhatsApp -->
@@ -47,6 +47,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -54,6 +55,10 @@
       background-color: var(--bg-black);
       color: #fff;
       overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     .wrapper {
@@ -68,18 +73,18 @@
     /* Header Estilo Logotipo da Imagem */
     .header {
       background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
-      padding: 40px 20px;
+      padding: 30px 20px;
       text-align: center;
       border-bottom: 4px solid var(--primary-red);
       position: relative;
     }
 
     .logo-container {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
     .logo-main {
-      font-size: 2.5em;
+      font-size: 2em;
       font-weight: 900;
       color: #fff;
       text-transform: uppercase;
@@ -89,7 +94,7 @@
 
     .logo-sub {
       color: var(--primary-red);
-      font-size: 1.8em;
+      font-size: 1.5em;
       font-weight: 800;
       text-transform: uppercase;
       margin-top: -5px;
@@ -98,10 +103,10 @@
     .local-badge {
       background: var(--primary-red);
       display: inline-block;
-      padding: 8px 20px;
+      padding: 6px 15px;
       border-radius: 4px;
-      margin-top: 15px;
-      font-size: 0.9em;
+      margin-top: 12px;
+      font-size: 0.85em;
       font-weight: 700;
       text-transform: uppercase;
     }
@@ -111,10 +116,14 @@
       background: #fff;
       color: #000;
       text-align: center;
-      padding: 12px;
+      padding: 10px 5px;
       font-weight: 900;
-      font-size: 0.9em;
+      font-size: 0.85em;
       text-transform: uppercase;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .hero-image {
@@ -122,21 +131,23 @@
       height: auto;
       display: block;
       border-bottom: 2px solid #333;
+      max-height: 250px;
+      object-fit: cover;
     }
 
     .container {
-      padding: 40px 20px;
+      padding: 30px 15px;
       background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
     }
 
     h1 {
-      font-size: 2.2em;
+      font-size: 1.8em;
       color: #fff;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       text-transform: uppercase;
       font-weight: 900;
-      line-height: 1.1;
+      line-height: 1.2;
     }
 
     h1 span {
@@ -144,24 +155,25 @@
     }
 
     .subtitle {
-      font-size: 1.1em;
+      font-size: 1em;
       color: var(--text-gray);
       text-align: center;
-      margin-bottom: 40px;
-      line-height: 1.6;
+      margin-bottom: 30px;
+      line-height: 1.5;
+      padding: 0 5px;
     }
 
     /* Cards de Serviço */
     .services {
       display: grid;
-      gap: 25px;
+      gap: 20px;
     }
 
     .service-card {
       background: var(--card-bg);
       border: 1px solid #333;
       border-left: 5px solid var(--primary-red);
-      padding: 25px;
+      padding: 20px;
       border-radius: 8px;
       transition: 0.3s;
       position: relative;
@@ -169,48 +181,53 @@
 
     .service-card:hover {
       background: #222;
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
 
     .service-title {
-      font-size: 1.4em;
+      font-size: 1.2em;
       color: #fff;
       font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .price-box {
       display: flex;
       align-items: baseline;
-      gap: 10px;
-      margin-bottom: 15px;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
     }
 
     .old-price {
       color: #666;
       text-decoration: line-through;
-      font-size: 0.9em;
+      font-size: 0.85em;
     }
 
     .new-price {
       color: var(--primary-red);
-      font-size: 1.8em;
+      font-size: 1.5em;
       font-weight: 900;
     }
 
     .price-note {
-      font-size: 0.8em;
+      font-size: 0.75em;
       color: #999;
-      margin-left: 10px;
       font-style: italic;
     }
 
     .service-details {
       color: var(--text-gray);
-      font-size: 0.95em;
+      font-size: 0.9em;
       list-style: none;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
+    }
+
+    .service-details li {
+      margin-bottom: 5px;
+      line-height: 1.4;
     }
 
     .service-details li::before {
@@ -224,12 +241,12 @@
       background: rgba(255, 204, 0, 0.1);
       border: 1px solid var(--warning-yellow);
       border-radius: 5px;
-      padding: 12px 15px;
-      margin-top: 20px;
-      font-size: 0.85em;
+      padding: 10px 12px;
+      margin-top: 15px;
+      font-size: 0.8em;
       color: #ffcc00;
       text-align: center;
-      line-height: 1.4;
+      line-height: 1.3;
     }
 
     .legal-notice strong {
@@ -245,95 +262,139 @@
     }
 
     .offer-title {
-      font-size: 1.8em;
+      font-size: 1.5em;
       color: #fff;
       font-weight: 900;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       line-height: 1.2;
     }
 
     .offer-title span {
       color: var(--primary-red);
       display: block;
-      font-size: 1.2em;
+      font-size: 1em;
       margin-top: 5px;
     }
 
     .benefits-list {
       display: grid;
-      gap: 15px;
-      margin: 25px 0;
+      gap: 12px;
+      margin: 20px 0;
     }
 
     .benefit-item {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
       gap: 10px;
-      font-size: 1.1em;
+      font-size: 0.95em;
       font-weight: 700;
       color: #fff;
       text-align: left;
-      padding: 0 10px;
+      padding: 0 5px;
     }
 
     .benefit-icon {
       color: var(--primary-red);
-      font-size: 1.3em;
-      min-width: 30px;
+      font-size: 1.1em;
+      min-width: 25px;
+      flex-shrink: 0;
     }
 
     .highlight-badge {
       background: var(--primary-red);
       color: white;
-      padding: 5px 15px;
+      padding: 4px 12px;
       border-radius: 20px;
       font-weight: 900;
       display: inline-block;
-      margin: 10px 0;
-      font-size: 0.9em;
+      margin: 8px 0;
+      font-size: 0.85em;
     }
 
-    /* Botões */
+    /* Botões RESPONSIVOS */
     .cta-container {
-      margin-top: 50px;
+      margin-top: 40px;
       text-align: center;
     }
 
     .btn-whatsapp {
       background: #25d366;
       color: #fff;
-      padding: 20px 30px;
-      border-radius: 50px;
+      padding: 16px 20px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 900;
       display: block;
-      font-size: 1.2em;
-      margin-bottom: 15px;
-      box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 12px;
+      box-shadow: 0 6px 15px rgba(37, 211, 102, 0.2);
       transition: 0.3s;
+      font-size: 1em;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-user-select: none;
+      user-select: none;
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
     }
 
     .btn-phone {
       background: transparent;
       color: #fff;
       border: 2px solid #fff;
-      padding: 15px 30px;
-      border-radius: 50px;
+      padding: 14px 20px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 700;
       display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
       transition: 0.3s;
+      font-size: 0.95em;
+      text-align: center;
+      cursor: pointer;
+      touch-action: manipulation;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
     }
 
-    .btn-whatsapp:hover { transform: scale(1.03); }
+    .btn-whatsapp:hover, 
+    .btn-whatsapp:active { 
+      transform: scale(1.02); 
+      background: #1da851;
+    }
+
+    .btn-phone:hover,
+    .btn-phone:active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Estilo para toque em dispositivos móveis */
+    @media (hover: none) {
+      .btn-whatsapp:active {
+        transform: scale(0.98);
+      }
+      .btn-phone:active {
+        transform: scale(0.98);
+      }
+    }
 
     .footer {
       background: #000;
-      padding: 40px 20px;
+      padding: 30px 15px;
       text-align: center;
-      font-size: 0.8em;
+      font-size: 0.75em;
       color: #666;
       border-top: 1px solid #333;
     }
@@ -344,25 +405,138 @@
       background: rgba(255, 204, 0, 0.1);
       border: 1px solid var(--warning-yellow);
       border-radius: 8px;
-      padding: 20px;
-      margin: 30px 0;
+      padding: 15px;
+      margin: 25px 0;
       text-align: center;
     }
 
     .disclaimer-global h3 {
       color: var(--warning-yellow);
-      margin-bottom: 10px;
-      font-size: 1.1em;
+      margin-bottom: 8px;
+      font-size: 1em;
     }
 
-    @media (max-width: 600px) {
-      .logo-main { font-size: 2em; }
-      .logo-sub { font-size: 1.4em; }
-      .offer-title { font-size: 1.5em; }
-      .benefit-item { font-size: 1em; }
-      .benefit-item { flex-direction: column; text-align: center; gap: 5px; }
-      .new-price { font-size: 1.6em; }
-      .legal-notice { font-size: 0.8em; padding: 10px; }
+    .disclaimer-global p {
+      font-size: 0.85em;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    /* Media Queries para diferentes tamanhos de tela */
+    
+    /* Telas muito pequenas (até 360px) */
+    @media (max-width: 360px) {
+      .header {
+        padding: 20px 15px;
+      }
+      
+      .logo-main {
+        font-size: 1.7em;
+      }
+      
+      .logo-sub {
+        font-size: 1.3em;
+      }
+      
+      h1 {
+        font-size: 1.6em;
+      }
+      
+      .btn-whatsapp,
+      .btn-phone {
+        max-width: 280px;
+        padding: 14px 16px;
+        font-size: 0.95em;
+        min-height: 48px;
+      }
+      
+      .service-card {
+        padding: 15px;
+      }
+    }
+
+    /* Moto G6 Play específico (720x1440) e similares */
+    @media (min-width: 360px) and (max-width: 400px) {
+      .btn-whatsapp,
+      .btn-phone {
+        max-width: 300px;
+        padding: 15px 18px;
+      }
+      
+      .hero-image {
+        max-height: 200px;
+      }
+    }
+
+    /* Telas médias (401px - 600px) */
+    @media (min-width: 401px) and (max-width: 600px) {
+      .container {
+        padding: 35px 20px;
+      }
+      
+      .btn-whatsapp,
+      .btn-phone {
+        max-width: 340px;
+        padding: 17px 22px;
+      }
+      
+      .hero-image {
+        max-height: 220px;
+      }
+    }
+
+    /* Telas maiores (acima de 600px) */
+    @media (min-width: 601px) {
+      .container {
+        padding: 40px 25px;
+      }
+      
+      .btn-whatsapp,
+      .btn-phone {
+        max-width: 360px;
+        padding: 18px 25px;
+        font-size: 1.05em;
+        min-height: 56px;
+      }
+      
+      .hero-image {
+        max-height: 250px;
+      }
+      
+      h1 {
+        font-size: 2em;
+      }
+      
+      .subtitle {
+        font-size: 1.1em;
+      }
+    }
+
+    /* Evitar zoom em inputs no iOS */
+    @supports (-webkit-touch-callout: none) {
+      .btn-whatsapp,
+      .btn-phone {
+        font-size: 16px; /* Tamanho fixo para evitar zoom no iOS */
+      }
+    }
+
+    /* Melhorar legibilidade em telas pequenas */
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+      
+      .service-title {
+        font-size: 1.1em;
+      }
+      
+      .new-price {
+        font-size: 1.4em;
+      }
+      
+      .benefit-item {
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
@@ -434,7 +608,7 @@
             </div>
           </div>
           
-          <div class="price-box" style="justify-content: center; margin-top: 20px;">
+          <div class="price-box" style="justify-content: center; margin-top: 15px;">
             <span class="new-price">🚨 OFERTA ESPECIAL: ECONOMIZE ATÉ 40%</span>
           </div>
           
@@ -447,7 +621,7 @@
           <div class="service-title">Troca de Óleo e Filtros</div>
           <div class="price-box">
             <span class="old-price">De R$ 320</span>
-            <span class="new-price">R$ 199</span>
+            <span class="new-price">R$ 239</span>
             <span class="price-note">(a partir de)</span>
           </div>
           <ul class="service-details">
@@ -504,7 +678,7 @@
       <div class="disclaimer-global">
         <h3>📋 TERMOS E CONDIÇÕES</h3>
         <p>1. Os preços são <strong>promocionais e podem variar</strong> conforme o modelo, ano e condições do veículo.</p>
-        <p>2. A <strong>retirada gratuita</strong> está sujeita à disponibilidade e distância máxima de 09km da oficina.</p>
+        <p>2. A <strong>retirada gratuita</strong> está sujeita à disponibilidade e distância máxima de 15km da oficina.</p>
         <p>3. A <strong>garantia de 3 meses</strong> cobre defeitos de mão de obra, não abrangendo peças com desgaste natural.</p>
         <p>4. <strong>Consulte-nos via WhatsApp</strong> para confirmar preço final e elegibilidade do seu veículo.</p>
       </div>
@@ -523,8 +697,8 @@
       <p><strong>MECÂNICA SOUZA</strong></p>
       <p>Rua Osvaldo Cruz, 56 - Terra Boa - PR</p>
       <p>Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00</p>
-      <p style="margin-top: 20px;"><strong>⚠️ ATENÇÃO:</strong> Não se arrisque com mecânicos duvidosos. Garantia de 3 meses em todos os serviços e retirada gratuita do seu veículo! <strong>Preços sujeitos à confirmação após avaliação.</strong></p>
-      <p style="margin-top: 10px;">© 2026 Mecânica Souza. Todos os direitos reservados.</p>
+      <p style="margin-top: 15px;"><strong>⚠️ ATENÇÃO:</strong> Não se arrisque com mecânicos duvidosos. Garantia de 3 meses em todos os serviços e retirada gratuita do seu veículo! <strong>Preços sujeitos à confirmação após avaliação.</strong></p>
+      <p style="margin-top: 8px;">© 2026 Mecânica Souza. Todos os direitos reservados.</p>
     </div>
   </div>
 
